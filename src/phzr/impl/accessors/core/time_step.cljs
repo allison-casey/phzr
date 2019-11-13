@@ -1,0 +1,41 @@
+(ns phzr.impl.accessors.core.time-step)
+
+(def time-step-get-properties
+  {:actual-fps "actualFps"
+   :callback "callback"
+   :delta "delta"
+   :delta-history "deltaHistory"
+   :delta-index "deltaIndex"
+   :delta-smoothing-max "deltaSmoothingMax"
+   :force-set-time-out "forceSetTimeOut"
+   :frame "frame"
+   :frames-this-second "framesThisSecond"
+   :game "game"
+   :in-focus "inFocus"
+   :last-time "lastTime"
+   :min-fps "minFps"
+   :next-fps-update "nextFpsUpdate"
+   :now "now"
+   :panic-max "panicMax"
+   :raf "raf"
+   :raw-delta "rawDelta"
+   :running "running"
+   :start-time "startTime"
+   :started "started"
+   :target-fps "targetFps"
+   :time "time"})
+
+(def time-step-set-properties
+  {:callback "callback"
+   :delta "delta"
+   :delta-history "deltaHistory"
+   :delta-index "deltaIndex"
+   :delta-smoothing-max "deltaSmoothingMax"
+   :last-time "lastTime"
+   :min-fps "minFps"
+   :now "now"
+   :panic-max "panicMax"
+   :raw-delta "rawDelta"
+   :start-time "startTime"
+   :target-fps "targetFps"
+   :time "time"})

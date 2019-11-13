@@ -1,0 +1,36 @@
+(ns phzr.impl.accessors.game-objects.components.animation)
+
+(def animation-get-properties
+  {:accumulator "accumulator"
+   :animation-manager "animationManager"
+   :current-anim "currentAnim"
+   :current-frame "currentFrame"
+   :duration "duration"
+   :forward "forward"
+   :frame-rate "frameRate"
+   :is-paused "isPaused"
+   :is-playing "isPlaying"
+   :ms-per-frame "msPerFrame"
+   :next-anim "nextAnim"
+   :next-tick "nextTick"
+   :parent "parent"
+   :pending-repeat "pendingRepeat"
+   :repeat-counter "repeatCounter"
+   :skip-missed-frames "skipMissedFrames"})
+
+(def animation-set-properties
+  {:accumulator "accumulator"
+   :animation-manager "animationManager"
+   :current-anim "currentAnim"
+   :current-frame "currentFrame"
+   :duration "duration"
+   :forward "forward"
+   :frame-rate "frameRate"
+   :is-playing "isPlaying"
+   :ms-per-frame "msPerFrame"
+   :next-anim "nextAnim"
+   :next-tick "nextTick"
+   :parent "parent"
+   :pending-repeat "pendingRepeat"
+   :repeat-counter "repeatCounter"
+   :skip-missed-frames "skipMissedFrames"})

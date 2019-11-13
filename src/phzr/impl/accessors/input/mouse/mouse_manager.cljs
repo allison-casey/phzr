@@ -1,0 +1,33 @@
+(ns phzr.impl.accessors.input.mouse.mouse-manager)
+
+(def mouse-manager-get-properties
+  {:capture "capture"
+   :enabled "enabled"
+   :locked "locked"
+   :manager "manager"
+   :on-mouse-down "onMouseDown"
+   :on-mouse-down-window "onMouseDownWindow"
+   :on-mouse-move "onMouseMove"
+   :on-mouse-out "onMouseOut"
+   :on-mouse-over "onMouseOver"
+   :on-mouse-up "onMouseUp"
+   :on-mouse-up-window "onMouseUpWindow"
+   :on-mouse-wheel "onMouseWheel"
+   :pointer-lock-change "pointerLockChange"
+   :target "target"})
+
+(def mouse-manager-set-properties
+  {:capture "capture"
+   :enabled "enabled"
+   :locked "locked"
+   :manager "manager"
+   :on-mouse-down "onMouseDown"
+   :on-mouse-down-window "onMouseDownWindow"
+   :on-mouse-move "onMouseMove"
+   :on-mouse-out "onMouseOut"
+   :on-mouse-over "onMouseOver"
+   :on-mouse-up "onMouseUp"
+   :on-mouse-up-window "onMouseUpWindow"
+   :on-mouse-wheel "onMouseWheel"
+   :pointer-lock-change "pointerLockChange"
+   :target "target"})

@@ -1,0 +1,35 @@
+(ns phzr.impl.accessors.animations.animation)
+
+(def animation-get-properties
+  {:delay "delay"
+   :duration "duration"
+   :frame-rate "frameRate"
+   :frames "frames"
+   :hide-on-complete "hideOnComplete"
+   :key "key"
+   :manager "manager"
+   :ms-per-frame "msPerFrame"
+   :paused "paused"
+   :repeat "repeat"
+   :repeat-delay "repeatDelay"
+   :show-on-start "showOnStart"
+   :skip-missed-frames "skipMissedFrames"
+   :type "type"
+   :yoyo "yoyo"})
+
+(def animation-set-properties
+  {:delay "delay"
+   :duration "duration"
+   :frame-rate "frameRate"
+   :frames "frames"
+   :hide-on-complete "hideOnComplete"
+   :key "key"
+   :manager "manager"
+   :ms-per-frame "msPerFrame"
+   :paused "paused"
+   :repeat "repeat"
+   :repeat-delay "repeatDelay"
+   :show-on-start "showOnStart"
+   :skip-missed-frames "skipMissedFrames"
+   :type "type"
+   :yoyo "yoyo"})

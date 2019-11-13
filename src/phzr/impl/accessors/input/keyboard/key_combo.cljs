@@ -1,0 +1,32 @@
+(ns phzr.impl.accessors.input.keyboard.key-combo)
+
+(def key-combo-get-properties
+  {:current "current"
+   :delete-on-match "deleteOnMatch"
+   :enabled "enabled"
+   :index "index"
+   :key-codes "keyCodes"
+   :manager "manager"
+   :matched "matched"
+   :max-key-delay "maxKeyDelay"
+   :progress "progress"
+   :reset-on-match "resetOnMatch"
+   :reset-on-wrong-key "resetOnWrongKey"
+   :size "size"
+   :time-last-matched "timeLastMatched"
+   :time-matched "timeMatched"})
+
+(def key-combo-set-properties
+  {:current "current"
+   :delete-on-match "deleteOnMatch"
+   :enabled "enabled"
+   :index "index"
+   :key-codes "keyCodes"
+   :manager "manager"
+   :matched "matched"
+   :max-key-delay "maxKeyDelay"
+   :reset-on-match "resetOnMatch"
+   :reset-on-wrong-key "resetOnWrongKey"
+   :size "size"
+   :time-last-matched "timeLastMatched"
+   :time-matched "timeMatched"})

@@ -7,6 +7,12 @@ A ClojureScript wrapper for the Phaser HTML5 game framework.
 [![Join the chat at https://gitter.im/dparis/phzr](https://badges.gitter.im/Join%20Chat.svg)]
 (https://gitter.im/dparis/phzr?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
+## :NOTES:
+These files are manually added and need to be tracked.
+- core.cljs
+- impl.utils.*
+- impl.extend.*
+
 ## What is Phaser?
 
 [Phaser](http://phaser.io) is a fast, free and fun open source framework

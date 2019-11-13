@@ -1,0 +1,31 @@
+(ns phzr.impl.accessors.game-objects.group)
+
+(def group-get-properties
+  {:active "active"
+   :children "children"
+   :class-type "classType"
+   :create-callback "createCallback"
+   :create-multiple-callback "createMultipleCallback"
+   :default-frame "defaultFrame"
+   :default-key "defaultKey"
+   :is-parent "isParent"
+   :max-size "maxSize"
+   :name "name"
+   :remove-callback "removeCallback"
+   :run-child-update "runChildUpdate"
+   :scene "scene"})
+
+(def group-set-properties
+  {:active "active"
+   :children "children"
+   :class-type "classType"
+   :create-callback "createCallback"
+   :create-multiple-callback "createMultipleCallback"
+   :default-frame "defaultFrame"
+   :default-key "defaultKey"
+   :is-parent "isParent"
+   :max-size "maxSize"
+   :name "name"
+   :remove-callback "removeCallback"
+   :run-child-update "runChildUpdate"
+   :scene "scene"})

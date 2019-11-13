@@ -1,0 +1,37 @@
+(ns phzr.impl.accessors.physics.arcade.group)
+
+(def group-get-properties
+  {:active "active"
+   :children "children"
+   :class-type "classType"
+   :create-callback "createCallback"
+   :create-multiple-callback "createMultipleCallback"
+   :default-frame "defaultFrame"
+   :default-key "defaultKey"
+   :defaults "defaults"
+   :is-parent "isParent"
+   :max-size "maxSize"
+   :name "name"
+   :physics-type "physicsType"
+   :remove-callback "removeCallback"
+   :run-child-update "runChildUpdate"
+   :scene "scene"
+   :world "world"})
+
+(def group-set-properties
+  {:active "active"
+   :children "children"
+   :class-type "classType"
+   :create-callback "createCallback"
+   :create-multiple-callback "createMultipleCallback"
+   :default-frame "defaultFrame"
+   :default-key "defaultKey"
+   :defaults "defaults"
+   :is-parent "isParent"
+   :max-size "maxSize"
+   :name "name"
+   :physics-type "physicsType"
+   :remove-callback "removeCallback"
+   :run-child-update "runChildUpdate"
+   :scene "scene"
+   :world "world"})

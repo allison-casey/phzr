@@ -1,0 +1,29 @@
+(ns phzr.impl.accessors.game-objects.game-object)
+
+(def game-object-get-properties
+  {:active "active"
+   :body "body"
+   :camera-filter "cameraFilter"
+   :data "data"
+   :ignore-destroy "ignoreDestroy"
+   :input "input"
+   :name "name"
+   :parent-container "parentContainer"
+   :render-flags "renderFlags"
+   :state "state"
+   :tab-index "tabIndex"
+   :type "type"})
+
+(def game-object-set-properties
+  {:active "active"
+   :body "body"
+   :camera-filter "cameraFilter"
+   :data "data"
+   :ignore-destroy "ignoreDestroy"
+   :input "input"
+   :name "name"
+   :parent-container "parentContainer"
+   :render-flags "renderFlags"
+   :state "state"
+   :tab-index "tabIndex"
+   :type "type"})

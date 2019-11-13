@@ -1,0 +1,33 @@
+(ns phzr.impl.accessors.textures.canvas-texture)
+
+(def canvas-texture-get-properties
+  {:buffer "buffer"
+   :canvas "canvas"
+   :context "context"
+   :custom-data "customData"
+   :data "data"
+   :data-source "dataSource"
+   :first-frame "firstFrame"
+   :frame-total "frameTotal"
+   :frames "frames"
+   :height "height"
+   :image-data "imageData"
+   :key "key"
+   :manager "manager"
+   :pixels "pixels"
+   :source "source"
+   :width "width"})
+
+(def canvas-texture-set-properties
+  {:buffer "buffer"
+   :custom-data "customData"
+   :data "data"
+   :data-source "dataSource"
+   :first-frame "firstFrame"
+   :frame-total "frameTotal"
+   :frames "frames"
+   :image-data "imageData"
+   :key "key"
+   :manager "manager"
+   :pixels "pixels"
+   :source "source"})

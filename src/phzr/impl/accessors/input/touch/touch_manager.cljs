@@ -1,0 +1,31 @@
+(ns phzr.impl.accessors.input.touch.touch-manager)
+
+(def touch-manager-get-properties
+  {:capture "capture"
+   :enabled "enabled"
+   :manager "manager"
+   :on-touch-cancel "onTouchCancel"
+   :on-touch-cancel-window "onTouchCancelWindow"
+   :on-touch-end "onTouchEnd"
+   :on-touch-end-window "onTouchEndWindow"
+   :on-touch-move "onTouchMove"
+   :on-touch-out "onTouchOut"
+   :on-touch-over "onTouchOver"
+   :on-touch-start "onTouchStart"
+   :on-touch-start-window "onTouchStartWindow"
+   :target "target"})
+
+(def touch-manager-set-properties
+  {:capture "capture"
+   :enabled "enabled"
+   :manager "manager"
+   :on-touch-cancel "onTouchCancel"
+   :on-touch-cancel-window "onTouchCancelWindow"
+   :on-touch-end "onTouchEnd"
+   :on-touch-end-window "onTouchEndWindow"
+   :on-touch-move "onTouchMove"
+   :on-touch-out "onTouchOut"
+   :on-touch-over "onTouchOver"
+   :on-touch-start "onTouchStart"
+   :on-touch-start-window "onTouchStartWindow"
+   :target "target"})

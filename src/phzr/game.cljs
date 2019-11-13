@@ -4,90 +4,89 @@
             [cljsjs.phaser]))
 
 (defn ->Game
-  "This is where the magic happens. The Game object is the heart of your game,
-  providing quick access to common functions and handling the boot process.
-
-  'Hell, there are no rules here - we're trying to accomplish something.'
-                                                        Thomas A. Edison
-
-  Parameters:
-    * width (number | string) {optional} - The width of your game in game pixels. If given as a string the value must be between 0 and 100 and will be used as the percentage width of the parent container, or the browser window if no parent is given.
-    * height (number | string) {optional} - The height of your game in game pixels. If given as a string the value must be between 0 and 100 and will be used as the percentage height of the parent container, or the browser window if no parent is given.
-    * renderer (number) {optional} - Which renderer to use: Phaser.AUTO will auto-detect, Phaser.WEBGL, Phaser.CANVAS or Phaser.HEADLESS (no rendering at all).
-    * parent (string | HTMLElement) {optional} - The DOM element into which this games canvas will be injected. Either a DOM ID (string) or the element itself.
-    * state (object) {optional} - The default state object. A object consisting of Phaser.State functions (preload, create, update, render) or null.
-    * transparent (boolean) {optional} - Use a transparent canvas background or not.
-    * antialias (boolean) {optional} - Draw all image textures anti-aliased or not. The default is for smooth textures, but disable if your game features pixel art.
-    * physics-config (object) {optional} - A physics configuration object to pass to the Physics world on creation."
+  "  Parameters:
+    * game-config (Phaser.Types.Core.GameConfig) {optional} - The configuration object for your Phaser Game instance."
   ([]
    (js/Phaser.Game.))
-  ([width]
-   (js/Phaser.Game. (clj->phaser width)))
-  ([width height]
-   (js/Phaser.Game. (clj->phaser width)
-                    (clj->phaser height)))
-  ([width height renderer]
-   (js/Phaser.Game. (clj->phaser width)
-                    (clj->phaser height)
-                    (clj->phaser renderer)))
-  ([width height renderer parent]
-   (js/Phaser.Game. (clj->phaser width)
-                    (clj->phaser height)
-                    (clj->phaser renderer)
-                    (clj->phaser parent)))
-  ([width height renderer parent state]
-   (js/Phaser.Game. (clj->phaser width)
-                    (clj->phaser height)
-                    (clj->phaser renderer)
-                    (clj->phaser parent)
-                    (clj->phaser state)))
-  ([width height renderer parent state transparent]
-   (js/Phaser.Game. (clj->phaser width)
-                    (clj->phaser height)
-                    (clj->phaser renderer)
-                    (clj->phaser parent)
-                    (clj->phaser state)
-                    (clj->phaser transparent)))
-  ([width height renderer parent state transparent antialias]
-   (js/Phaser.Game. (clj->phaser width)
-                    (clj->phaser height)
-                    (clj->phaser renderer)
-                    (clj->phaser parent)
-                    (clj->phaser state)
-                    (clj->phaser transparent)
-                    (clj->phaser antialias)))
-  ([width height renderer parent state transparent antialias physics-config]
-   (js/Phaser.Game. (clj->phaser width)
-                    (clj->phaser height)
-                    (clj->phaser renderer)
-                    (clj->phaser parent)
-                    (clj->phaser state)
-                    (clj->phaser transparent)
-                    (clj->phaser antialias)
-                    (clj->phaser physics-config))))
+  ([game-config]
+   (js/Phaser.Game. (clj->phaser game-config))))
 
 (defn destroy
-  "Nukes the entire game from orbit."
-  ([game]
-   (phaser->clj
-    (.destroy game))))
+  "Flags this Game instance as needing to be destroyed on the _next frame_, making this an asynchronous operation.
 
-(defn disable-step
-  "Disables core game loop stepping."
-  ([game]
-   (phaser->clj
-    (.disableStep game))))
+  It will wait until the current frame has completed and then call `runDestroy` internally.
 
-(defn enable-step
-  "Enable core game loop stepping. When enabled you must call game.step() directly (perhaps via a DOM button?)
-  Calling step will advance the game loop by one frame. This is extremely useful for hard to track down errors!"
+  If you need to react to the games eventual destruction, listen for the `DESTROY` event.
+
+  If you **do not** need to run Phaser again on the same web page you can set the `noReturn` argument to `true` and it will free-up
+  memory being held by the core Phaser plugins. If you do need to create another game instance on the same page, leave this as `false`.
+
+  Parameters:
+    * game (Phaser.Game) - Targeted instance for method
+    * remove-canvas (boolean) - Set to `true` if you would like the parent canvas element removed from the DOM, or `false` to leave it in place.
+    * no-return (boolean) {optional} - If `true` all the core Phaser plugins are destroyed. You cannot create another instance of Phaser on the same web page if you do this."
+  ([game remove-canvas]
+   (phaser->clj
+    (.destroy game
+              (clj->phaser remove-canvas))))
+  ([game remove-canvas no-return]
+   (phaser->clj
+    (.destroy game
+              (clj->phaser remove-canvas)
+              (clj->phaser no-return)))))
+
+(defn get-frame
+  "Returns the current game frame.
+
+  When the game starts running, the frame is incremented every time Request Animation Frame, or Set Timeout, fires.
+
+  Returns:  number - The current game frame."
   ([game]
    (phaser->clj
-    (.enableStep game))))
+    (.getFrame game))))
+
+(defn get-time
+  "Returns the time that the current game step started at, as based on `performance.now`.
+
+  Returns:  number - The current game timestamp."
+  ([game]
+   (phaser->clj
+    (.getTime game))))
+
+(defn headless-step
+  "A special version of the Game Step for the HEADLESS renderer only.
+
+  The main Game Step. Called automatically by the Time Step, once per browser frame (typically as a result of
+  Request Animation Frame, or Set Timeout on very old browsers.)
+
+  The step will update the global managers first, then proceed to update each Scene in turn, via the Scene Manager.
+
+  This process emits `prerender` and `postrender` events, even though nothing actually displays.
+
+  Parameters:
+    * game (Phaser.Game) - Targeted instance for method
+    * time (number) - The current time. Either a High Resolution Timer value if it comes from Request Animation Frame, or Date.now if using SetTimeout.
+    * delta (number) - The delta time in ms since the last frame. This is a smoothed and capped value based on the FPS rate."
+  ([game time delta]
+   (phaser->clj
+    (.headlessStep game
+                   (clj->phaser time)
+                   (clj->phaser delta)))))
 
 (defn step
-  "When stepping is enabled you must call this function directly (perhaps via a DOM button?) to advance the game loop by one frame.
-  This is extremely useful to hard to track down errors! Use the internal stepCount property to monitor progress."
-  ([game]
+  "The main Game Step. Called automatically by the Time Step, once per browser frame (typically as a result of
+  Request Animation Frame, or Set Timeout on very old browsers.)
+
+  The step will update the global managers first, then proceed to update each Scene in turn, via the Scene Manager.
+
+  It will then render each Scene in turn, via the Renderer. This process emits `prerender` and `postrender` events.
+
+  Parameters:
+    * game (Phaser.Game) - Targeted instance for method
+    * time (number) - The current time. Either a High Resolution Timer value if it comes from Request Animation Frame, or Date.now if using SetTimeout.
+    * delta (number) - The delta time in ms since the last frame. This is a smoothed and capped value based on the FPS rate."
+  ([game time delta]
    (phaser->clj
-    (.step game))))
+    (.step game
+           (clj->phaser time)
+           (clj->phaser delta)))))

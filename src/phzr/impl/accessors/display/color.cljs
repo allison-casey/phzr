@@ -1,0 +1,32 @@
+(ns phzr.impl.accessors.display.color)
+
+(def color-get-properties
+  {:alpha "alpha"
+   :alpha-gl "alphaGL"
+   :blue "blue"
+   :blue-gl "blueGL"
+   :color "color"
+   :color-32 "color32"
+   :gl "gl"
+   :green "green"
+   :green-gl "greenGL"
+   :h "h"
+   :red "red"
+   :red-gl "redGL"
+   :rgba "rgba"
+   :s "s"
+   :v "v"})
+
+(def color-set-properties
+  {:alpha "alpha"
+   :alpha-gl "alphaGL"
+   :blue "blue"
+   :blue-gl "blueGL"
+   :gl "gl"
+   :green "green"
+   :green-gl "greenGL"
+   :h "h"
+   :red "red"
+   :red-gl "redGL"
+   :s "s"
+   :v "v"})

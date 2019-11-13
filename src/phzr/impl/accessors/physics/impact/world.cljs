@@ -1,0 +1,31 @@
+(ns phzr.impl.accessors.physics.impact.world)
+
+(def world-get-properties
+  {:bodies "bodies"
+   :cell-size "cellSize"
+   :collision-map "collisionMap"
+   :debug-graphic "debugGraphic"
+   :defaults "defaults"
+   :delta "delta"
+   :draw-debug "drawDebug"
+   :enabled "enabled"
+   :gravity "gravity"
+   :max-step "maxStep"
+   :scene "scene"
+   :time-scale "timeScale"
+   :walls "walls"})
+
+(def world-set-properties
+  {:bodies "bodies"
+   :cell-size "cellSize"
+   :collision-map "collisionMap"
+   :debug-graphic "debugGraphic"
+   :defaults "defaults"
+   :delta "delta"
+   :draw-debug "drawDebug"
+   :enabled "enabled"
+   :gravity "gravity"
+   :max-step "maxStep"
+   :scene "scene"
+   :time-scale "timeScale"
+   :walls "walls"})

@@ -1,0 +1,33 @@
+(ns phzr.impl.accessors.physics.impact.impact-body)
+
+(def impact-body-get-properties
+  {:accel "accel"
+   :body "body"
+   :bounce "bounce"
+   :check-against "checkAgainst"
+   :collides "collides"
+   :debug-body-color "debugBodyColor"
+   :debug-show-body "debugShowBody"
+   :debug-show-velocity "debugShowVelocity"
+   :friction "friction"
+   :gravity "gravity"
+   :max-vel "maxVel"
+   :offset "offset"
+   :size "size"
+   :vel "vel"})
+
+(def impact-body-set-properties
+  {:accel "accel"
+   :body "body"
+   :bounce "bounce"
+   :check-against "checkAgainst"
+   :collides "collides"
+   :debug-body-color "debugBodyColor"
+   :debug-show-body "debugShowBody"
+   :debug-show-velocity "debugShowVelocity"
+   :friction "friction"
+   :gravity "gravity"
+   :max-vel "maxVel"
+   :offset "offset"
+   :size "size"
+   :vel "vel"})

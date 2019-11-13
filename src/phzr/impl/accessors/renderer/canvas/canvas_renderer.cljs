@@ -1,0 +1,29 @@
+(ns phzr.impl.accessors.renderer.canvas.canvas-renderer)
+
+(def canvas-renderer-get-properties
+  {:antialias "antialias"
+   :blend-modes "blendModes"
+   :config "config"
+   :current-context "currentContext"
+   :draw-count "drawCount"
+   :game "game"
+   :game-canvas "gameCanvas"
+   :game-context "gameContext"
+   :height "height"
+   :snapshot-state "snapshotState"
+   :type "type"
+   :width "width"})
+
+(def canvas-renderer-set-properties
+  {:antialias "antialias"
+   :blend-modes "blendModes"
+   :config "config"
+   :current-context "currentContext"
+   :draw-count "drawCount"
+   :game "game"
+   :game-canvas "gameCanvas"
+   :game-context "gameContext"
+   :height "height"
+   :snapshot-state "snapshotState"
+   :type "type"
+   :width "width"})

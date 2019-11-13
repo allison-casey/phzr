@@ -1,0 +1,35 @@
+(ns phzr.impl.accessors.cameras.controls.smoothed-key-control)
+
+(def smoothed-key-control-get-properties
+  {:accel-x "accelX"
+   :accel-y "accelY"
+   :active "active"
+   :camera "camera"
+   :down "down"
+   :drag-x "dragX"
+   :drag-y "dragY"
+   :left "left"
+   :max-speed-x "maxSpeedX"
+   :max-speed-y "maxSpeedY"
+   :right "right"
+   :up "up"
+   :zoom-in "zoomIn"
+   :zoom-out "zoomOut"
+   :zoom-speed "zoomSpeed"})
+
+(def smoothed-key-control-set-properties
+  {:accel-x "accelX"
+   :accel-y "accelY"
+   :active "active"
+   :camera "camera"
+   :down "down"
+   :drag-x "dragX"
+   :drag-y "dragY"
+   :left "left"
+   :max-speed-x "maxSpeedX"
+   :max-speed-y "maxSpeedY"
+   :right "right"
+   :up "up"
+   :zoom-in "zoomIn"
+   :zoom-out "zoomOut"
+   :zoom-speed "zoomSpeed"})

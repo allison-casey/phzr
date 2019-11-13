@@ -1,0 +1,29 @@
+(ns phzr.impl.accessors.game-objects.components.transform-matrix)
+
+(def transform-matrix-get-properties
+  {:a "a"
+   :b "b"
+   :c "c"
+   :d "d"
+   :decomposed-matrix "decomposedMatrix"
+   :e "e"
+   :f "f"
+   :matrix "matrix"
+   :rotation "rotation"
+   :rotation-normalized "rotationNormalized"
+   :scale-x "scaleX"
+   :scale-y "scaleY"
+   :tx "tx"
+   :ty "ty"})
+
+(def transform-matrix-set-properties
+  {:a "a"
+   :b "b"
+   :c "c"
+   :d "d"
+   :decomposed-matrix "decomposedMatrix"
+   :e "e"
+   :f "f"
+   :matrix "matrix"
+   :tx "tx"
+   :ty "ty"})

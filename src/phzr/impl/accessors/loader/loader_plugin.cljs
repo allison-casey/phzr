@@ -1,0 +1,40 @@
+(ns phzr.impl.accessors.loader.loader-plugin)
+
+(def loader-plugin-get-properties
+  {:base-url "baseURL"
+   :cache-manager "cacheManager"
+   :cross-origin "crossOrigin"
+   :inflight "inflight"
+   :list "list"
+   :max-parallel-downloads "maxParallelDownloads"
+   :path "path"
+   :prefix "prefix"
+   :progress "progress"
+   :queue "queue"
+   :scene "scene"
+   :state "state"
+   :systems "systems"
+   :texture-manager "textureManager"
+   :total-complete "totalComplete"
+   :total-failed "totalFailed"
+   :total-to-load "totalToLoad"
+   :xhr "xhr"})
+
+(def loader-plugin-set-properties
+  {:base-url "baseURL"
+   :cache-manager "cacheManager"
+   :cross-origin "crossOrigin"
+   :inflight "inflight"
+   :list "list"
+   :max-parallel-downloads "maxParallelDownloads"
+   :path "path"
+   :prefix "prefix"
+   :progress "progress"
+   :queue "queue"
+   :scene "scene"
+   :systems "systems"
+   :texture-manager "textureManager"
+   :total-complete "totalComplete"
+   :total-failed "totalFailed"
+   :total-to-load "totalToLoad"
+   :xhr "xhr"})

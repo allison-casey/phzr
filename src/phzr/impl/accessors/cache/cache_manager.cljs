@@ -1,0 +1,31 @@
+(ns phzr.impl.accessors.cache.cache-manager)
+
+(def cache-manager-get-properties
+  {:audio "audio"
+   :binary "binary"
+   :bitmap-font "bitmapFont"
+   :custom "custom"
+   :html "html"
+   :json "json"
+   :obj "obj"
+   :physics "physics"
+   :shader "shader"
+   :text "text"
+   :tilemap "tilemap"
+   :video "video"
+   :xml "xml"})
+
+(def cache-manager-set-properties
+  {:audio "audio"
+   :binary "binary"
+   :bitmap-font "bitmapFont"
+   :custom "custom"
+   :html "html"
+   :json "json"
+   :obj "obj"
+   :physics "physics"
+   :shader "shader"
+   :text "text"
+   :tilemap "tilemap"
+   :video "video"
+   :xml "xml"})

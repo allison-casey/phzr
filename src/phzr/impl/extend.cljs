@@ -280,6 +280,8 @@
  phzr.impl.accessors.cameras.scene-2-d.effects.fade/fade-set-properties
  nil)
 
+(js/console.log "Extending Flash")
+
 (ex/extend-phaser-class
  js/Phaser.Cameras.Scene2D.Effects.Flash
  phzr.impl.accessors.cameras.scene-2-d.effects.flash/flash-get-properties
@@ -303,6 +305,7 @@
  phzr.impl.accessors.cameras.scene-2-d.effects.zoom/zoom-get-properties
  phzr.impl.accessors.cameras.scene-2-d.effects.zoom/zoom-set-properties
  nil)
+
 
 (ex/extend-phaser-class
  js/Phaser.Core.Config
@@ -334,17 +337,21 @@
  phzr.impl.accessors.curves.ellipse/ellipse-set-properties
  nil)
 
+
 (ex/extend-phaser-class
  js/Phaser.Curves.Line
  phzr.impl.accessors.curves.line/line-get-properties
  phzr.impl.accessors.curves.line/line-set-properties
  nil)
 
+(js/console.log "Extending MoveTo")
+
 (ex/extend-phaser-class
  js/Phaser.Curves.MoveTo
  phzr.impl.accessors.curves.move-to/move-to-get-properties
  phzr.impl.accessors.curves.move-to/move-to-set-properties
  nil)
+
 
 (ex/extend-phaser-class
  js/Phaser.Curves.Path

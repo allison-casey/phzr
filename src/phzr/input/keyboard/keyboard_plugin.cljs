@@ -233,8 +233,10 @@
 
   Returns:  Phaser.Types.Input.Keyboard.CursorKeys - An object containing the properties: `up`, `down`, `left`, `right`, `space` and `shift`."
   ([keyboard-plugin]
+    ;; (.createCursorKeys keyboard-plugin)
    (phaser->clj
-    (.createCursorKeys keyboard-plugin))))
+    (.createCursorKeys keyboard-plugin))
+   ))
 
 (defn disable-global-capture
   "Disables Phaser from preventing any key captures you may have defined, without actually removing them.

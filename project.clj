@@ -5,7 +5,7 @@
             :url "http://opensource.org/licenses/MIT"}
 
   :dependencies [[org.clojure/clojure "1.7.0"]
-                 [cljsjs/phaser "2.4.2-0"]
+                 [cljsjs/phaser "3.18.1-0"]
                  [camel-snake-kebab "0.3.2"]]
 
   :profiles {:dev {:dependencies [[com.cemerick/piggieback "0.2.1"]]

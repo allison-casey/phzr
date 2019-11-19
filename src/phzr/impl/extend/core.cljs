@@ -27,18 +27,21 @@
   (let [get-keys     (set (keys get-properties))
         set-keys     (set (keys set-properties))
         get-set-keys (set (concat get-keys set-keys))]
-    (if-not (aget phaser-class "prototype")
-      (println "WARNING: ATTEMPTING TO EXTEND NATIVE JS OBJECT" phaser-class)
-      (extend-type phaser-class
-        IPhaserObj
-        (pset! [o k v]
-          (phaser-set! o k set-properties v))
+    (if phaser-class
+      (if-not (aget phaser-class "prototype")
+        (println "WARNING: ATTEMPTING TO EXTEND NATIVE JS OBJECT" phaser-class)
+        (extend-type phaser-class
+          IPhaserObj
+          (pset! [o k v]
+            (phaser-set! o k set-properties v))
 
-        ISeqable
-        (-seq [o]
-          (map (fn [k] [k (get o k)]) get-set-keys))
+          ISeqable
+          (-seq [o]
+            (map (fn [k] [k (get o k)]) get-set-keys))
 
-        ILookup
-        (-lookup
-          ([o k] (-lookup o k nil))
-          ([o k nf] (phaser-get o k get-properties nf)))))))
+          ILookup
+          (-lookup
+            ([o k] (-lookup o k nil))
+            ([o k nf] (phaser-get o k get-properties nf)))))
+      (println "WARNING: Phaser Class is undefined."
+                      phaser-class get-keys set-keys get-set-keys))))
